@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* height: 100vh; */
+}
+@font-face{
+    font-family: 'IrishGrover';
+    src: url(font/IrishGrover-Regular.ttf);
+}
+@font-face{
+    font-family: 'JoefinsSans';
+    src: url(font/JosefinSans-Regular.ttf);
+}
+body{
+    font-family: 'JoefinsSans';
+    background-color:#4c82f5 ;
+}
+.container{
+    margin: 15px auto 0;
+    display: flex;
+    max-width: 900px;
+    height: 600px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 10px 10px 15px rgba(0,0,0,.3);
+    border-radius: 20px;
+    /* overflow: hidden; */
+    background: rgba(255,255,255,.5);
+    border-top: 1px solid rgba(255,255,255,.5);
+    border-left: 1px solid rgba(255,255,255,.5);
+    backdrop-filter: blur(5px);
+}
+.form{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 100%;
+    border-right: 5px solid #119beb;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.form .inputan{
+    position: relative;
+    padding-bottom: 20px;
+    /* background-color: red; */
+    top: 0px;
+}
+.form .inputan .username,.password{
+    background: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: block;
+    outline: none;
+    border: 2px solid #3498db;
+    transition: .2s;
+}
+.form .inputan .username:focus{
+    border-color: #34db7f;
+}
+.form .inputan .password:focus{
+    border-color: #34db7f;
+}
+.form .inputan .check{
+    outline: none;
+    border: 2px solid rgb(17, 155, 235);
+    width: 15px;
+    height: 15px;
+}
+.form .inputan .check::after{
+    content: 'Remember Me.';
+    margin-left: 5px;
+    /* background-color: blue; */
+    width: 100px;
+    position: absolute;
+    left: 20px;
+}
+.form .curve{
+    display: block;
+    width: 700px;
+    position: absolute;
+    bottom: 0;
+}
+.form header{
+    font-weight: bold;
+    position: absolute;
+    top: 40px;
+    color: rgb(114, 123, 136);
+    background: none;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.form .inputan .submit,.reset{
+    border: 2px solid #2ecc71;
+    position: relative;
+    width: 103px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background: none;
+    transition: 150ms;
+}
+.form .inputan .submit:hover{
+    background-color: #2ecc71;
+    color: #fff;
+}
+.form .inputan .reset{
+    background: none;
+    border: 2px solid #e63946;
+}
+.form .inputan .reset:hover{
+    background-color: #e63946;
+    color: #fff;
+}
+.form .inputan a{
+    font-family: sans-serif;
+    position: relative;
+    font-size: 12px;
+    display: inline-block;
+    /* margin-left: 5px; */
+    margin-top: 20px;
+    /* margin: auto; */
+    text-decoration: none;
+    color: #1539d8;
+}
+.form .inputan p{
+    position: relative;
+    font-size: 15px;
+    display: inline-block;
+    /* margin-left: 5px; */
+    margin-top: 5px;
+    text-decoration: none;
+    color: #1539d8;
+}
+.form .inputan a:hover{
+    color: #4cc9f0;
+}
+.form .inputan .gotpass{
+    margin-left: 5px;
+}
+.form .inputan .pembts{
+    margin-left: 5px;
+}
+.form footer{
+    font-weight: bold;
+    font-family: 'JoefinsSans';
+    color: #fff;
+    font-size: 15px;
+    margin: 20px 0;
+    position: absolute;
+    bottom: 0;
+}
+.form footer a{
+    font-weight: bold;
+    font-family: 'JoefinsSans';
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 100ms;
+}
+.form footer a:hover{
+    text-decoration: underline;
+}
+.halaman{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 675px) {
+    /* body{
+        background-color: red;
+    } */
+    .container .halaman{
+        width: 0;
+    }
+    .container{
+        margin: 20px auto;
+        /* margin: 20px; */
+        width: 375px;
+    }
+    .container .form header{
+        color: rgb(84, 93, 133);
+        padding: 5px 50px;
+        border-radius: 10px;
+        /* background-color: #1168eb; */
+        border: 2px solid #1168eb;
+        font-size: 2.5em;
+    }
+    .container .form{
+        /* padding: 0; */
+        border: none;
+        /* width: 375px; */
+    }
+    .container .form .inputan{
+        top: 40px;
+        transform: scale(1.1);
+    }
+}
+@media screen and (max-width: 400px){
+    .container{
+        margin: auto;
+        width: 280px;
+    }
+    .container .form header{
+        font-size: 1.6em;
+    }
+    .container .form .inputan{
+        top: 0px;
+        transform: scale(1);
+    }
+}
